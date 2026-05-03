@@ -1,0 +1,402 @@
+[
+  {
+    "word": "情绪",
+    "category": "情感",
+    "difficulty": 1
+  },
+  {
+    "word": "心情",
+    "category": "情感",
+    "difficulty": 1
+  },
+  {
+    "word": "快乐",
+    "category": "情感",
+    "difficulty": 1
+  },
+  {
+    "word": "悲伤",
+    "category": "情感",
+    "difficulty": 2
+  },
+  {
+    "word": "愤怒",
+    "category": "情感",
+    "difficulty": 2
+  },
+  {
+    "word": "喜悦",
+    "category": "情感",
+    "difficulty": 2
+  },
+  {
+    "word": "焦虑",
+    "category": "情感",
+    "difficulty": 3
+  },
+  {
+    "word": "平静",
+    "category": "情感",
+    "difficulty": 3
+  },
+  {
+    "word": "感动",
+    "category": "情感",
+    "difficulty": 3
+  },
+  {
+    "word": "思念",
+    "category": "情感",
+    "difficulty": 4
+  },
+  {
+    "word": "桌子",
+    "category": "物品",
+    "difficulty": 1
+  },
+  {
+    "word": "椅子",
+    "category": "物品",
+    "difficulty": 1
+  },
+  {
+    "word": "手机",
+    "category": "物品",
+    "difficulty": 1
+  },
+  {
+    "word": "电脑",
+    "category": "物品",
+    "difficulty": 2
+  },
+  {
+    "word": "书本",
+    "category": "物品",
+    "difficulty": 2
+  },
+  {
+    "word": "杯子",
+    "category": "物品",
+    "difficulty": 2
+  },
+  {
+    "word": "窗户",
+    "category": "物品",
+    "difficulty": 3
+  },
+  {
+    "word": "钥匙",
+    "category": "物品",
+    "difficulty": 3
+  },
+  {
+    "word": "雨伞",
+    "category": "物品",
+    "difficulty": 3
+  },
+  {
+    "word": "钱包",
+    "category": "物品",
+    "difficulty": 4
+  },
+  {
+    "word": "天空",
+    "category": "自然",
+    "difficulty": 1
+  },
+  {
+    "word": "大海",
+    "category": "自然",
+    "difficulty": 1
+  },
+  {
+    "word": "森林",
+    "category": "自然",
+    "difficulty": 1
+  },
+  {
+    "word": "河流",
+    "category": "自然",
+    "difficulty": 2
+  },
+  {
+    "word": "山峰",
+    "category": "自然",
+    "difficulty": 2
+  },
+  {
+    "word": "云朵",
+    "category": "自然",
+    "difficulty": 2
+  },
+  {
+    "word": "花朵",
+    "category": "自然",
+    "difficulty": 3
+  },
+  {
+    "word": "太阳",
+    "category": "自然",
+    "difficulty": 3
+  },
+  {
+    "word": "月亮",
+    "category": "自然",
+    "difficulty": 3
+  },
+  {
+    "word": "星星",
+    "category": "自然",
+    "difficulty": 4
+  },
+  {
+    "word": "奔跑",
+    "category": "动作",
+    "difficulty": 1
+  },
+  {
+    "word": "跳跃",
+    "category": "动作",
+    "difficulty": 1
+  },
+  {
+    "word": "思考",
+    "category": "动作",
+    "difficulty": 1
+  },
+  {
+    "word": "阅读",
+    "category": "动作",
+    "difficulty": 2
+  },
+  {
+    "word": "写作",
+    "category": "动作",
+    "difficulty": 2
+  },
+  {
+    "word": "歌唱",
+    "category": "动作",
+    "difficulty": 2
+  },
+  {
+    "word": "游泳",
+    "category": "动作",
+    "difficulty": 3
+  },
+  {
+    "word": "飞翔",
+    "category": "动作",
+    "difficulty": 3
+  },
+  {
+    "word": "攀登",
+    "category": "动作",
+    "difficulty": 3
+  },
+  {
+    "word": "舞蹈",
+    "category": "动作",
+    "difficulty": 4
+  },
+  {
+    "word": "米饭",
+    "category": "食物",
+    "difficulty": 1
+  },
+  {
+    "word": "面条",
+    "category": "食物",
+    "difficulty": 1
+  },
+  {
+    "word": "水果",
+    "category": "食物",
+    "difficulty": 1
+  },
+  {
+    "word": "蔬菜",
+    "category": "食物",
+    "difficulty": 2
+  },
+  {
+    "word": "饺子",
+    "category": "食物",
+    "difficulty": 2
+  },
+  {
+    "word": "面包",
+    "category": "食物",
+    "difficulty": 2
+  },
+  {
+    "word": "咖啡",
+    "category": "食物",
+    "difficulty": 3
+  },
+  {
+    "word": "茶水",
+    "category": "食物",
+    "difficulty": 3
+  },
+  {
+    "word": "蛋糕",
+    "category": "食物",
+    "difficulty": 3
+  },
+  {
+    "word": "巧克力",
+    "category": "食物",
+    "difficulty": 4
+  },
+  {
+    "word": "老虎",
+    "category": "动物",
+    "difficulty": 1
+  },
+  {
+    "word": "狮子",
+    "category": "动物",
+    "difficulty": 1
+  },
+  {
+    "word": "兔子",
+    "category": "动物",
+    "difficulty": 1
+  },
+  {
+    "word": "猫咪",
+    "category": "动物",
+    "difficulty": 2
+  },
+  {
+    "word": "狗狗",
+    "category": "动物",
+    "difficulty": 2
+  },
+  {
+    "word": "大象",
+    "category": "动物",
+    "difficulty": 2
+  },
+  {
+    "word": "海豚",
+    "category": "动物",
+    "difficulty": 3
+  },
+  {
+    "word": "蝴蝶",
+    "category": "动物",
+    "difficulty": 3
+  },
+  {
+    "word": "老鹰",
+    "category": "动物",
+    "difficulty": 3
+  },
+  {
+    "word": "熊猫",
+    "category": "动物",
+    "difficulty": 4
+  },
+  {
+    "word": "早晨",
+    "category": "时间",
+    "difficulty": 1
+  },
+  {
+    "word": "黄昏",
+    "category": "时间",
+    "difficulty": 1
+  },
+  {
+    "word": "深夜",
+    "category": "时间",
+    "difficulty": 1
+  },
+  {
+    "word": "春天",
+    "category": "时间",
+    "difficulty": 2
+  },
+  {
+    "word": "夏天",
+    "category": "时间",
+    "difficulty": 2
+  },
+  {
+    "word": "秋天",
+    "category": "时间",
+    "difficulty": 2
+  },
+  {
+    "word": "冬天",
+    "category": "时间",
+    "difficulty": 3
+  },
+  {
+    "word": "昨天",
+    "category": "时间",
+    "difficulty": 3
+  },
+  {
+    "word": "明天",
+    "category": "时间",
+    "difficulty": 3
+  },
+  {
+    "word": "未来",
+    "category": "时间",
+    "difficulty": 4
+  },
+  {
+    "word": "自由",
+    "category": "抽象",
+    "difficulty": 1
+  },
+  {
+    "word": "梦想",
+    "category": "抽象",
+    "difficulty": 1
+  },
+  {
+    "word": "希望",
+    "category": "抽象",
+    "difficulty": 1
+  },
+  {
+    "word": "勇气",
+    "category": "抽象",
+    "difficulty": 2
+  },
+  {
+    "word": "智慧",
+    "category": "抽象",
+    "difficulty": 2
+  },
+  {
+    "word": "真理",
+    "category": "抽象",
+    "difficulty": 2
+  },
+  {
+    "word": "记忆",
+    "category": "抽象",
+    "difficulty": 3
+  },
+  {
+    "word": "孤独",
+    "category": "抽象",
+    "difficulty": 3
+  },
+  {
+    "word": "幸福",
+    "category": "抽象",
+    "difficulty": 3
+  },
+  {
+    "word": "命运",
+    "category": "抽象",
+    "difficulty": 4
+  }
+]

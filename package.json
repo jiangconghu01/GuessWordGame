@@ -1,0 +1,23 @@
+{
+  "name": "guess-word-game",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "纯前端中文语义猜词游戏 - 基于多级 Fallback 相似度计算",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "generate-data": "tsx src/data/generateMockData.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "jsdom": "^24.0.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.4.21",
+    "vitest": "^2.1.9"
+  }
+}

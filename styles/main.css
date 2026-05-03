@@ -1,0 +1,385 @@
+:root {
+  --c-bg: #f5f7fb;
+  --c-surface: #ffffff;
+  --c-text: #1f2937;
+  --c-muted: #64748b;
+  --c-border: #e2e8f0;
+  --c-primary: #4f46e5;
+  --c-primary-dark: #4338ca;
+  --c-hot: #ef4444;
+  --c-warm: #f59e0b;
+  --c-cool: #06b6d4;
+  --c-cold: #3b82f6;
+  --c-success: #10b981;
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--c-bg);
+  color: var(--c-text);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+#app {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 100vh;
+}
+
+/* ===== Header ===== */
+.app-header {
+  text-align: center;
+}
+.app-header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+}
+.app-header .subtitle {
+  margin: 0.35rem 0 0;
+  color: var(--c-muted);
+  font-size: 0.92rem;
+}
+
+/* ===== Footer ===== */
+.app-footer {
+  text-align: center;
+  color: var(--c-muted);
+  font-size: 0.78rem;
+  padding-top: 1rem;
+}
+
+/* ===== Loading ===== */
+.loading {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--c-muted);
+}
+
+/* ===== Stats summary on idle screen ===== */
+.stats-summary {
+  background: var(--c-surface);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+.welcome {
+  margin: 0;
+  text-align: center;
+  color: var(--c-muted);
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  gap: 0.5rem;
+}
+.stats-grid > div {
+  display: flex;
+  flex-direction: column;
+}
+.stats-num {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--c-primary);
+}
+.stats-lbl {
+  font-size: 0.75rem;
+  color: var(--c-muted);
+  margin-top: 0.15rem;
+}
+
+/* ===== Game area ===== */
+.game-area {
+  background: var(--c-surface);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* ===== Result panel ===== */
+.result-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.similarity-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--c-text);
+}
+.similarity-bar {
+  height: 14px;
+  background: #eef2ff;
+  border-radius: 7px;
+  overflow: hidden;
+}
+.similarity-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #3b82f6 0%, #f59e0b 60%, #ef4444 100%);
+  transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.target-reveal {
+  margin-top: 0.5rem;
+  font-size: 1.05rem;
+  color: var(--c-text);
+}
+.target-reveal.won {
+  color: var(--c-success);
+  font-size: 1.2rem;
+  font-weight: 700;
+  animation: pop 0.5s ease;
+}
+.target-reveal.giveup {
+  color: var(--c-muted);
+}
+.action-area {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+.result-stats {
+  margin: 0.25rem 0 0.6rem;
+  color: var(--c-muted);
+  font-size: 0.92rem;
+}
+
+/* ===== Input ===== */
+.guess-input {
+  display: flex;
+  gap: 0.5rem;
+}
+.guess-input input {
+  flex: 1;
+  padding: 0.7rem 0.9rem;
+  font-size: 1rem;
+  border: 2px solid var(--c-border);
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.15s;
+  background: #fff;
+  color: var(--c-text);
+}
+.guess-input input:focus {
+  border-color: var(--c-primary);
+}
+.guess-input input:disabled {
+  background: #f1f5f9;
+  color: var(--c-muted);
+}
+.guess-input button {
+  padding: 0 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: var(--c-primary);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+.guess-input button:hover:not(:disabled) {
+  background: var(--c-primary-dark);
+}
+.guess-input button:active:not(:disabled) {
+  transform: scale(0.97);
+}
+.guess-input button:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+
+/* ===== History ===== */
+.guess-history h3 {
+  margin: 0.4rem 0 0.5rem;
+  font-size: 0.95rem;
+  color: var(--c-muted);
+  font-weight: 600;
+}
+.guess-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 320px;
+  overflow-y: auto;
+  border: 1px solid var(--c-border);
+  border-radius: 10px;
+}
+.guess-empty {
+  padding: 1.2rem;
+  text-align: center;
+  color: var(--c-muted);
+  font-size: 0.9rem;
+}
+.guess-item {
+  display: grid;
+  grid-template-columns: 36px 1fr 80px 70px;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.7rem;
+  border-bottom: 1px solid var(--c-border);
+  background: #fff;
+  transition: background 0.2s;
+}
+.guess-item:last-child {
+  border-bottom: none;
+}
+.guess-item.latest {
+  background: #fef9c3;
+  animation: flash 1s ease;
+}
+.guess-rank {
+  color: var(--c-muted);
+  font-size: 0.78rem;
+  text-align: center;
+}
+.guess-word {
+  font-weight: 600;
+  word-break: break-all;
+}
+.guess-bar {
+  height: 6px;
+  background: #eef2ff;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.guess-bar-fill {
+  height: 100%;
+  background: var(--c-cold);
+  transition: width 0.4s ease;
+}
+.guess-item.warm .guess-bar-fill { background: var(--c-warm); }
+.guess-item.cool .guess-bar-fill { background: var(--c-cool); }
+.guess-item.hot .guess-bar-fill { background: var(--c-hot); }
+.guess-sim {
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+.guess-item.hot .guess-sim { color: var(--c-hot); }
+.guess-item.warm .guess-sim { color: var(--c-warm); }
+.guess-item.cool .guess-sim { color: var(--c-cool); }
+.guess-item.cold .guess-sim { color: var(--c-cold); }
+
+/* ===== Controls ===== */
+.game-controls {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.game-controls button {
+  flex: 1 1 30%;
+  padding: 0.55rem 0.6rem;
+  font-size: 0.9rem;
+  background: #fff;
+  color: var(--c-text);
+  border: 1px solid var(--c-border);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+.game-controls button:hover {
+  background: #f8fafc;
+  border-color: var(--c-primary);
+}
+
+/* ===== Primary button ===== */
+.btn-primary {
+  padding: 0.6rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: var(--c-primary);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+.btn-primary:hover {
+  background: var(--c-primary-dark);
+}
+.btn-primary:active {
+  transform: scale(0.97);
+}
+
+/* ===== Toast ===== */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 2rem;
+  transform: translate(-50%, 1rem);
+  background: rgba(30, 41, 59, 0.92);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s, transform 0.25s;
+  max-width: 90vw;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  z-index: 1000;
+}
+.toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* ===== Animations ===== */
+@keyframes pop {
+  0% { transform: scale(0.7); opacity: 0; }
+  60% { transform: scale(1.08); opacity: 1; }
+  100% { transform: scale(1); }
+}
+@keyframes flash {
+  0% { background: #fde68a; }
+  100% { background: #fef9c3; }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+  .app-header h1 { font-size: 1.35rem; }
+  .guess-item { grid-template-columns: 30px 1fr 60px 60px; gap: 0.35rem; padding: 0.5rem 0.55rem; }
+  .stats-num { font-size: 1.2rem; }
+}
+
+/* ===== Dark mode (auto) ===== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --c-bg: #0f172a;
+    --c-surface: #1e293b;
+    --c-text: #f1f5f9;
+    --c-muted: #94a3b8;
+    --c-border: #334155;
+  }
+  .similarity-bar { background: #334155; }
+  .guess-bar { background: #334155; }
+  .guess-input input { background: #0f172a; }
+  .guess-input input:disabled { background: #1e293b; }
+  .guess-item { background: var(--c-surface); }
+  .guess-item.latest { background: #3f3f1f; }
+  .game-controls button { background: var(--c-surface); color: var(--c-text); }
+  .game-controls button:hover { background: #2a3a52; }
+}
