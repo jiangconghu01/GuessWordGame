@@ -8,7 +8,7 @@ describe('normalizeText', () => {
 
   it('removes punctuation', () => {
     expect(normalizeText('桌子！')).toBe('桌子');
-    expect(normalizeText('hello, world!')).toBe('helloworld');
+    expect(normalizeText('hello, world!')).toBe('heloworld');
   });
 
   it('removes consecutive duplicate chars', () => {

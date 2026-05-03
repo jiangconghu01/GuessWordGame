@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from 'vite';
 
 export default defineConfig({
@@ -8,7 +9,8 @@ export default defineConfig({
     sourcemap: true
   },
   test: {
-    environment: 'jsdom',
-    globals: true
+    environment: 'node',
+    globals: true,
+    setupFiles: ['./tests/setup.ts']
   }
 });
